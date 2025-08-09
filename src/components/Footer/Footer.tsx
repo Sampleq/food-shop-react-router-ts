@@ -8,7 +8,10 @@ export const Footer = ({}: FooterProps) => {
       <div className={styles.copy}>© {new Date().getFullYear()} Sampleq</div>
       <ul>
         <li>
-          <a href='' target='_blank'>
+          <a
+            href='https://github.com/Sampleq/food-shop-react-router-ts'
+            target='_blank'
+          >
             Repo
           </a>
         </li>

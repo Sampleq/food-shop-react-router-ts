@@ -23,7 +23,10 @@ export const Header = ({}: HeaderProps) => {
         </li>
 
         <li>
-          <a href='' target='_blank'>
+          <a
+            href='https://github.com/Sampleq/food-shop-react-router-ts'
+            target='_blank'
+          >
             Repo
           </a>
         </li>

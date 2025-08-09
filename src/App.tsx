@@ -20,7 +20,7 @@ import { Contacts } from './pages/Contacts';
 function App() {
   return (
     <>
-      <BrowserRouter basename='/'>
+      <BrowserRouter basename='/food-shop-react-router-ts'>
         {/* basename используется для указания базового URL, который будет добавляться ко всем маршрутам вашего приложения. */}
 
         <Header />
