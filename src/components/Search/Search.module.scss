@@ -1,0 +1,22 @@
+.search {
+  position: relative;
+  margin: 3rem 0;
+
+  input[type='text'] {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 0.1rem solid #de9e9e;
+
+    padding: 1rem 0.5rem;
+    font-size: 1.8rem;
+
+    margin-bottom: 1rem;
+
+    &:focus {
+      border-bottom: 0.1rem solid var(--maincolor);
+      box-shadow: 0 0.05rem var (--maincolor);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.recipe {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  margin-bottom: 2rem;
+
+  img,
+  iframe {
+    max-width: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+
+  th {
+    border-bottom: 0.2rem solid lightgray;
+    padding: 1rem;
+  }
+
+  td {
+    text-align: center;
+    border-bottom: 0.1rem solid lightgray;
+    padding: 0.8rem;
+  }
+}

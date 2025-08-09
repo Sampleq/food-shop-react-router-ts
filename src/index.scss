@@ -1,0 +1,29 @@
+:root {
+  --maincolor: hotpink;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+input {
+  font-size: 1.6rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: var(--maincolor);
+  color: white;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: crimson;
+  }
+}

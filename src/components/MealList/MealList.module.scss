@@ -1,0 +1,15 @@
+.mealList {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  /* пытается вместить в ряд максимальное колличество карточек минимальной ширины (25rem) и если остаётся свободное пространство увеличивает ширину карточки.
+
+  высота ряда - это высота самой высокой карточки.
+  */
+  gap: 3rem 2rem;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto 2rem;
+}

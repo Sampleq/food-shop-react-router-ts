@@ -1,0 +1,22 @@
+.footer {
+  background-color: color-mix(in srgb, var(--maincolor) 80%, #fff 20%);
+  padding: 2rem 4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .copy {
+    font-size: 1.6rem;
+    color: #fff;
+  }
+
+  ul {
+    display: flex;
+    font-size: 1.8rem;
+    list-style: none;
+    li a {
+      color: #fff;
+    }
+  }
+}
