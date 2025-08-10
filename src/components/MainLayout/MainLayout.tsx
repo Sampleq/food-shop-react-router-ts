@@ -1,14 +1,18 @@
-import type { ReactNode } from 'react';
 import styles from './MainLayout.module.scss';
+import { Header } from '../Header';
+import { Footer } from '../Footer';
+import { Outlet } from 'react-router-dom';
 
-interface MainLayoutProps {
-  children: ReactNode;
-}
-
-export const MainLayout = ({ children }: MainLayoutProps) => {
+export const MainLayout = () => {
   return (
-    <main className={styles.mainLayout}>
-      <div className={styles.wrapper}>{children}</div>
-    </main>
+    <>
+      <Header />
+      <main className={styles.mainLayout}>
+        <div className={styles.wrapper}>
+          <Outlet />
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 };

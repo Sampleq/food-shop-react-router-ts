@@ -2,10 +2,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+
 import { Home } from './pages/Home';
 
 import { NotFound } from './pages/NotFound';
-import { MainLayout } from './components/MainLayout';
+import { MainLayout } from './components/MainLayout/MainLayout_no_Outlet';
 import { CategoryDetailed } from './pages/CategoryDetailed';
 import { Recipe } from './pages/Recipe';
 import { About } from './pages/About';
@@ -20,23 +23,29 @@ function App() {
       <BrowserRouter basename='/food-shop-react-router-ts'>
         {/* basename используется для указания базового URL, который будет добавляться ко всем маршрутам вашего приложения. */}
 
-        {/* <Header /> */}
+        <Header />
 
-        <Routes>
-          <Route path='/' element={<MainLayout />}>
+        {/* переделать нв MainLayout с Outlet */}
+        <MainLayout>
+          <Routes>
             <Route index element={<Home />} />
             <Route
               path='category/:categoryName'
               element={<CategoryDetailed />}
             />
             <Route path='recipe/:mealId' element={<Recipe />} />
+            <Route path='*' element={<NotFound />} />
+
             <Route path='about' element={<About />} />
             <Route path='contacts' element={<Contacts />} />
-            <Route path='*' element={<NotFound />} />
-          </Route>
-        </Routes>
+            {/* 
+            <Route path='units/:id/:lang?' element={<Unit />} />
+            {/* :lang? - необязательный slug *\/}
+          */}
+          </Routes>
+        </MainLayout>
 
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );
