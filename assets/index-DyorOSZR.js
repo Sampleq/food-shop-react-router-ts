@@ -1,1 +1,0 @@
-import{a,j as t}from"./index-Dq0J9NGS.js";const e="_btn_1aqej_1",n={btn:e},c=({})=>{const s=a();return t.jsxs(t.Fragment,{children:[t.jsx("h2",{className:n.contacts,children:"Contacts Component"}),t.jsx("button",{className:n.btn+" btn",onClick:()=>s(-1),children:"← Go Back"})]})};export{c as Contacts,c as default};
