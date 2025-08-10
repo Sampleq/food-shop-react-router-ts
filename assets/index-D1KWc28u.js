@@ -1,0 +1,1 @@
+import{a as o,j as t}from"./main-fFSrFCs9.js";const n={},e=({})=>{const s=o();return t.jsxs(t.Fragment,{children:[t.jsx("h2",{className:n.notFound,children:"NotFound Component"}),t.jsx("button",{className:n.btn+" btn",onClick:()=>s(-1),children:"← Go Back"})]})};export{e as NotFound,e as default};
