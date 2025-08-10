@@ -16,6 +16,9 @@ export const Header = ({}: HeaderProps) => {
         </li>
         */}
         <li>
+          <Link to={'broken'}>Broken page</Link>
+        </li>
+        <li>
           <Link to={'contacts'}>Contacts</Link>
         </li>
         <li>

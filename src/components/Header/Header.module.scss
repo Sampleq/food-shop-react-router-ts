@@ -1,10 +1,14 @@
 .header {
   background-color: var(--maincolor);
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 425px) {
+    padding: 2rem 4rem;
+  }
 
   h1 {
     font-size: 3rem;
