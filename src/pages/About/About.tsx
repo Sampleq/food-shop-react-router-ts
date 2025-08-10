@@ -15,3 +15,5 @@ export const About = ({}: AboutProps) => {
     </>
   );
 };
+
+export default About;

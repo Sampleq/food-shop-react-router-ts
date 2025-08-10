@@ -87,3 +87,5 @@ export const Recipe = ({}: RecipeProps) => {
     </>
   );
 };
+
+export default Recipe;

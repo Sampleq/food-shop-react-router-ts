@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styles from './CategoryDetailed.module.scss';
 import { useEffect, useState } from 'react';
 import type { Meal } from '@/types';
@@ -18,13 +18,20 @@ export const CategoryDetailed = ({}: CategoryDetailedProps) => {
 
   const [meals, setMeals] = useState<Meal[]>([]);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     getFilteredByCategory(categoryName!).then((meals) => setMeals(meals));
   }, [categoryName]);
 
   return (
     <div className={styles.categoryDetailed}>
+      <button className={styles.btn + ' btn'} onClick={() => navigate(-1)}>
+        ← Go Back
+      </button>
       {meals.length ? <MealList meals={meals} /> : <Preloader />}
     </div>
   );
 };
+
+export default CategoryDetailed;

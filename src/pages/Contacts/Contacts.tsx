@@ -15,3 +15,5 @@ export const Contacts = ({}: ContactsProps) => {
     </>
   );
 };
+
+export default Contacts;
