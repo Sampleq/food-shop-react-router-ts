@@ -8,7 +8,8 @@ export { API_URL } from './config';
 // www.themealdb.com/api/json/v1/1/lookup.php?i=52772
 export async function getMealById(mealId: Category['idCategory']) {
   try {
-    const response = await fetch(API_URL + 'lookup.php?i=' + mealId);
+    // const response = await fetch(API_URL + 'lookup.php?i=' + mealId); // NOT OK - пропустит URL без https://
+    const response = await fetch(new URL('lookup.php?i=' + mealId, API_URL)); // OK
     const meal: MealDetailedInfo = (await response.json()).meals[0];
     return meal;
   } catch (error) {
@@ -21,7 +22,6 @@ export async function getMealById(mealId: Category['idCategory']) {
 // www.themealdb.com/api/json/v1/1/categories.php
 export async function getAllCathegories() {
   try {
-    // const response = await fetch(API_URL + 'categories.php'); // NOT OK - пропустит URL без https://
     const response = await fetch(new URL('categories.php', API_URL).toString()); // OK
 
     const data = await response.json();
@@ -45,7 +45,9 @@ export async function getFilteredByCategory(
   categoryName: Category['strCategory']
 ) {
   try {
-    const response = await fetch(API_URL + 'filter.php?c=' + categoryName); // NOT OK - пропустит URL без https://
+    const response = await fetch(
+      new URL('filter.php?c=' + categoryName, API_URL).toString()
+    ); // OK
     const data = await response.json();
 
     const filteredByCategory: Meal[] = data.meals ?? [];

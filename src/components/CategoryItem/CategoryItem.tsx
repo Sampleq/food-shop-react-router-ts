@@ -1,14 +1,14 @@
 import type { Category } from '@/types';
 import styles from './CategoryItem.module.scss';
 import { Link } from 'react-router-dom';
+import { sliceTextWithEllipsis } from '@/utils/sliceTextWithEllipsis';
 
 interface CategoryItemProps {
   category: Category;
 }
 
 export const CategoryItem = ({ category }: CategoryItemProps) => {
-  const { idCategory, strCategory, strCategoryDescription, strCategoryThumb } =
-    category;
+  const { strCategory, strCategoryDescription, strCategoryThumb } = category;
   return (
     <div className={styles.categoryItem}>
       <img
@@ -25,7 +25,7 @@ export const CategoryItem = ({ category }: CategoryItemProps) => {
 
         <p className={styles.description}>
           {/* add fuction to trim text to 100chars with '...' in the end if longer */}
-          {strCategoryDescription.slice(0, 90) + '...'}
+          {sliceTextWithEllipsis(strCategoryDescription, 90)}
         </p>
 
         <p className={styles.more}>

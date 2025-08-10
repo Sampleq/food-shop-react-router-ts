@@ -30,7 +30,7 @@ export const Home = ({}: HomeProps) => {
       )
     );
 
-    navigate(pathname + `?search=${prompt}`);
+    navigate(pathname + (prompt ? `?search=${prompt}` : ''));
   }
 
   useEffect(() => {

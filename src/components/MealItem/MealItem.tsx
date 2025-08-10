@@ -1,7 +1,6 @@
 import type { Meal } from '@/types';
 import styles from './MealItem.module.scss';
 import { Link } from 'react-router-dom';
-import type path from 'path';
 
 interface MealItemProps {
   meal: Meal;

@@ -31,11 +31,7 @@ export const Search = ({ cb }: SearchProps) => {
         value={value}
       />
 
-      <button
-        type='submit'
-        className='btn'
-        style={{ position: 'absolute', top: 0, right: 0 }}
-      >
+      <button type='submit' className='btn'>
         Search
       </button>
     </form>
