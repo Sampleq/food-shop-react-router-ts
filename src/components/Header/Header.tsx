@@ -16,7 +16,7 @@ export const Header = ({}: HeaderProps) => {
         </li>
         */}
         <li>
-          <Link to={'broken'}>Broken page</Link>
+          <Link to={'broken'}>404</Link>
         </li>
         <li>
           <Link to={'contacts'}>Contacts</Link>
